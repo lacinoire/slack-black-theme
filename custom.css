@@ -1,5 +1,5 @@
 /*
-Copyright 2017 Bryan Keller (https://github.com/widget-)
+Copyright 2018 Carolin Brandt (https://github.com/lacinoire)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,24 +16,30 @@ limitations under the License.
 
 :root {
    /* Modify these to change your theme colors: */
-   --primary: #09F;
+   --primary: #0576b9;
+   --secondary: #05F;
    --text: #DDD;
-   --background: #111;
-   --background-elevated: #222;
+   --background: rgb(0, 0, 25);
+   --background-elevated: rgb(0, 0, 50);
+   --grey: #47484f;
 
    /* These should be less important: */
-   --background-hover: rgba(255, 255, 255, 0.1);
+   --background-hover: rgba(32, 0, 255, 0.10);
    --background-light: #AAA;
    --background-bright: #FFF;
 
-   --border-dim: #666;
+   --border-dim: #002098;
    --border-bright: var(--primary);
 
-   --text-bright: #FFF;
+   --text-bright: #EEE;
    --text-special: var(--primary);
 
-   --scrollbar-background: #000;
+   --scrollbar-background: rgb(0, 0, 50);
    --scrollbar-border: var(--primary);
+}
+
+#convo_container .convo_flexpane_divider, #file_preview_scroller .convo_flexpane_divider {
+  color: var(--primary)
 }
 
 h1, h2, h3, h4 {
@@ -41,40 +47,48 @@ h1, h2, h3, h4 {
 }
 
 .popover_mask {
-   background-color: rgba(0, 0, 0, 0.3);
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.file_container.file_has_thumb .preview_actions {
+  background-image: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,var(--secondary) 200%);
+}
+
+.sidebar_menu_list_item {
+  color: var(--text);
 }
 
 /* Team Picker */
-.TeamSidebar, .TeamSidebar .StoplightContainer, .TeamSidebar .TeamSidebar-addArea {
+/* .TeamSidebar, .TeamSidebar .StoplightContainer, .TeamSidebar .TeamSidebar-addArea {
    background-color: var(--background) !important;
    box-shadow: var(--background) 1px 1px 25px;
    color: var(--text);
    z-index: 1;
-}
+} */
 
 
 /* Channel selector */
 /*.TeamSidebar, .TeamSidebar .StoplightContainer, .TeamSidebar .TeamSidebar-addArea {*/
 /*nav.p-channel_sidebar {*/
-div.client_channels_list_container {
+/* div.client_channels_list_container {
    background-color: var(--background-elevated) !important;
    box-shadow: var(--background-elevated) 1px 1px 25px;
    color: var(--text);
    z-index: 1;
-}
+} */
 
-nav.p-channel_sidebar {
+/* nav.p-channel_sidebar {
    background-color: var(--background-elevated);
    color: var(--text);
-}
+} */
 
-#team_menu,
+/* #team_menu,
 body:not(.loading) #team_menu:hover,
 body:not(.loading) #team_menu:active {
    background-color: var(--background-elevated) !important;
-}
+} */
 
-.p-channel_sidebar__channel,
+/* .p-channel_sidebar__channel,
 .p-channel_sidebar__link,
 .p-channel_sidebar__channel:link,
 .p-channel_sidebar__link:link,
@@ -83,16 +97,16 @@ body:not(.loading) #team_menu:active {
 .p-channel_sidebar__channel:hover,
 .p-channel_sidebar__link:hover {
    color: var(--text) !important;
-}
+} */
 
 /* Channel with unread messages */
-.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
+/* .p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
 .p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name,
 .p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
 .p-channel_sidebar__section_heading_label--clickable:hover,
 .p-channel_sidebar__quickswitcher:hover {
    color: var(--text-bright) !important;
-}
+} */
 
 /*broken*/
 __TODO-highlight-indicator {
@@ -108,18 +122,26 @@ ts-jumper input[type="text"],
   background: var(--background) !important;
 }
 
+.channel_header_icon {
+  color: #09F
+}
+
+.channel_calls_button .call_icon.call_window_offline {
+  color: #09F;
+}
+
 .channel_header, #col_messages, #footer {
    box-shadow: none;
 }
 
 /* channel list */
-.p-channel_sidebar__channel,
+/* .p-channel_sidebar__channel,
 .p-channel_sidebar__link {
   border-radius: 0 15px 15px 0;
   height: 24px !important;
-}
+} */
 
-.p-channel_sidebar__channel a {
+/* .p-channel_sidebar__channel a {
   color: var(--text);
 }
 
@@ -160,49 +182,53 @@ ts-jumper input[type="text"],
 }
 
 /*broken*/
-li.active[class] span,
+/* li.active[class] span,
 #channels_scroller.show_which_channel_is_active[class] ul li.active .primary_action .prefix,
 #channels_scroller.show_which_channel_is_active[class] ul li.active .primary_action,
 #channels_scroller.show_which_channel_is_active[class] ul li.active .primary_action.im_name > *:not(.unread_highlights) {
    color: var(--text-special) !important;
    background-color: transparent;
    opacity: 1;
-}
+} */
 
 /*"more unreads" bottom*/
-.p-channel_sidebar__banner--top {
+/* .p-channel_sidebar__banner--top {
    background-color: var(--background);
    border: 1px solid var(--border-bright);
    border-top: none;
    border-radius: 0 0 15px 15px;
-}
+} */
 
 /*"more unreads" bottom */
-.p-channel_sidebar__banner--bottom {
+/* .p-channel_sidebar__banner--bottom {
    background-color: var(--background);
    border: 1px solid var(--border-bright);
    border-bottom: none;
    border-radius: 15px 15px 0 0;
-}
+} */
 
 /*"unread mentions"*/
-.p-channel_sidebar__badge,
+/* .p-channel_sidebar__badge,
 .p-channel_sidebar__banner--mentions {
-   /*inverted because important*/
+   /*inverted because important
    background-color: var(--border-bright) !important;
    border-color: var(--text-bright);
    color: var(--text-bright);
-}
+} */
 
 /*also add border to unread count for individual channels*/
-.p-channel_sidebar__badge {
+/* .p-channel_sidebar__badge {
    border: 1px solid;
-}
+} */
 
 /* new scrollbar */
-.p-channel_sidebar div.c-custom_scrollbar__thumb_vertical, .p-channel_sidebar div.c-scrollbar__bar {
+/* .p-channel_sidebar div.c-custom_scrollbar__thumb_vertical, .p-channel_sidebar div.c-scrollbar__bar {
   background: var(--background-elevated);
   border: 1px solid var(--scrollbar-border);
+} */
+
+.c-member__display-name {
+  color: var(--primary);
 }
 
 #channels_scroller.show_which_channel_is_active[class] li.active .presence.active i.presence_icon,
@@ -221,9 +247,17 @@ li.active[class] span,
    background: var(--background) !important;
 }
 
-ts-message, .channel_title .channel_name, ts-jumper input[type="text"],
+ts-message, ts-jumper input[type="text"],
 ts-jumper ol li .member_real_name, ts-jumper ol li .view_name, ts-jumper ol li .channel_name {
   color: var(--text) !important;
+}
+
+.channel_title .channel_name {
+  color: var(--primary) !important;
+}
+
+.flex_content_scroller {
+  background: var(--background);
 }
 
 .light_theme ts-message .message_content a.message_sender, #msg_input::-webkit-input-placeholder,
@@ -298,7 +332,7 @@ ts-message:hover {
 
 
 .file_container:after{
-   background-image: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,#333 100%) !important;
+   background-image: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,#333 50%) !important;
 }
 
 .rxn,
@@ -318,6 +352,17 @@ ts-message .action_hover_container .btn_msg_action,
   background: var(--background-elevated) !important;
 }
 
+.search_form {
+  border-color: #09F;
+}
+
+.channel_header_info button {
+  color: #09F;
+}
+
+.messages_header {
+  color: #09F;
+}
 
 #flex_contents .heading,
 #flex_contents .heading a,
@@ -387,6 +432,16 @@ ts-message .action_hover_container .btn_msg_action,
 
 .ql-container .ql-editor p {
   color: var(--text);
+  background: var(--background);
+}
+
+.toolbar_container { 
+  background: var(--background);
+  color: var(--text);
+}
+
+.faux_input {
+  color: var(--secondary);
 }
 
 #quick_switcher_btn:active, #quick_switcher_btn:focus, #quick_switcher_btn:hover {
@@ -422,6 +477,26 @@ span.match {
 
 #member_mentions h3 a {
    color: var(--text-special);
+}
+
+.whats_new_description {
+  color: var(--text);
+}
+
+.indifferent_grey {
+  color: var(--secondary);
+}
+
+.c-icon {
+  color: var(--grey);
+}
+
+.p-downloads_list__shift_hint {
+  background: linear-gradient(to bottom, var(--background), var(--background-elevated) 25%, var(--background-elevated));
+}
+
+.p-download_item__link--show {
+  background: var(--background);
 }
 
 pre.special_formatting{
@@ -514,6 +589,7 @@ ts-message a.timestamp{
 
 .tab_container .file_list_item .contents .member, .tab_container .file_list_item .contents .service_link, .tab_container .file_list_item .contents .share_info, .tab_container .file_list_item .contents .time {
    color: var(--text-special);
+   border: 1px solid var(--primary);
 }
 
 .tab_container .file_list_item:focus, .tab_container .file_list_item:hover {
@@ -527,7 +603,6 @@ ts-message a.timestamp{
 
 .file_preview_action.btn.ts_tip, .file_preview_link.btn.file_comment_link {
    border: 1px solid var(--border-bright) !important;
-   background-color: var(--background-hover) !important;
    color: var(--text) !important;
 }
 .file_preview_action.btn.ts_tip:hover, .file_preview_link.btn.file_comment_link:hover {
@@ -581,12 +656,11 @@ ts-mention.ts_tip:hover
 }
 
 .rxn .emoji-sizer {
-  background-color: transparent !important;
-  border-radius: 7px;
+  background-color: var(--background) !important;
   width: 24px;
   height: 24px;
-  margin: 0 0 0 -2px !important;
-  border: 1px solid transparent; /* looks silly but it makes the outline work */
+  /* margin: 0 0 0 -2px !important; */
+  /* border: 1px solid transparent; *//* looks silly but it makes the outline work */
 }
 
 .emoji-sizer {
@@ -596,6 +670,10 @@ ts-mention.ts_tip:hover
                    drop-shadow(-0  1px 0 var(--background-bright))
                    drop-shadow( 0 -1px 0 var(--background-bright));
    margin: 0 !important;
+}
+
+.emoji-sizer, .no_jumbomoji .emoji-sizer.emoji-only, .no_jumbomoji.emoji-sizer.emoji-only {
+  font-size: 25px;
 }
 
 .ts_icon.ts_icon_smile_o {
@@ -643,6 +721,10 @@ ts-mention.ts_tip:hover
 .p-emoji_picker__preview_text {
    background-color: var(--bacground-elevated);
    color: var(--text);
+}
+
+.emoji-outer {
+  background-color: var(--background) !important;
 }
 
 #emoji_menu h3, #emoji_menu #emoji_preview_text {
@@ -830,7 +912,7 @@ ts-thread .view_all_replies_container:hover {
 }
 .unread_group_header button {
    color: var(--text-special);
-},
+}
 
 
 /* scroller for threads & unreads */
