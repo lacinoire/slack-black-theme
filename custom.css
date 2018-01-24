@@ -625,7 +625,7 @@ ts-mention.ts_tip
 {
    color: var(--text-bright);
    background: var(--background-elevated);
-   border: 1px solid var(--border-dim);
+   border: 1px solid var(--primary);
    padding: 2px 4px;
    margin: 2px;
    border-radius: 10px;
@@ -1099,6 +1099,7 @@ ts-jumper ts-jumper-container {
 .c-message_list__day_divider__label__pill {
   background: var(--background) !important;
   color: var(--primary);
+  border: 1px solid var(--secondary);
 }
 
 .c-message_actions__button {
@@ -1133,8 +1134,17 @@ ts-jumper ts-jumper-container {
   border-right: 1px solid var(--primary) !important;
 }
 
+.c-message__reply_bar_view_thread {
+  border: 1px solid var(--secondary);
+}
+
 .c-icon {
-  color: var(--text) !important;
+  color: var(--text);
+}
+
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar):before, .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider:before {
+  background: var(--background);
+  border-bottom: 1px solid var(--secondary);
 }
 
 /* file container */
@@ -1158,4 +1168,26 @@ ts-jumper ts-jumper-container {
 
 span.c-message_attachment__text {
   color: mediumslateblue !important;
+}
+
+.c-mrkdwn__member--link, .c-mrkdwn__subteam--link {
+  background: var(--background-elevated) !important;
+}
+
+.c-message_attachment__pretext {
+  color: mediumslateblue !important;
+}
+
+.c-message_actions__container {
+  background: var(--primary);
+}
+
+.c-file__action_button, .c-file__action_button:link, .c-file__action_button:visited {
+  color: var(--primary);
+  background: var(--background-elevated);
+  border: 1px solid var(--secondary);
+}
+
+#im_title.away {
+  color: var(--primary);
 }
