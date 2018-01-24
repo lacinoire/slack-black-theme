@@ -1089,3 +1089,16 @@ ts-jumper ts-jumper-container {
   background: inherit;
   border: 1px solid var(--secondary);
 }
+
+.c-message_list__day_divider__label__pill {
+  background: var(--background);
+}
+
+.c-message_actions__button {
+  color: var(--text);
+}
+
+.c-message__bot_label {
+  color: var(--text);
+  background: var(--background-hover);
+}
