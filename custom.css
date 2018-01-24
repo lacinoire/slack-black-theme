@@ -1063,3 +1063,29 @@ ts-jumper, ts-jumper.active {
 ts-jumper ts-jumper-container {
   box-shadow: 0 5px 20px rgba(0,0,0,1);
 }
+
+/* post Slack 3.0.5 Stuff */
+
+.c-message__body .c-message--light .c-message__content_header {
+  color: var(--text);
+}
+
+.c-virtual_list__item:hover {
+  background-color: var(--background-hover)
+}
+
+.c-mrkdwn__broadcast--mention {
+  color: var(--secondary);
+  background-color: var(--background-elevated);
+}
+
+.c-reaction {
+  background: var(--background);
+  border: 1px solid var(--background-elevated);
+}
+
+.c-reation_add {
+  opacity: 1;
+  background: inherit;
+  border: 1px solid var(--secondary);
+}
