@@ -1,10 +1,11 @@
 # Slack Black Theme
 
 A darker, more contrasty, Slack theme.
+My version in particular does not modify the sidebar, so you can keep your own design and is mostly black with turqoise highlights.
 
 # Preview
 
-![Screenshot](https://cloud.githubusercontent.com/assets/7691630/24120350/4cbb643e-0d82-11e7-8353-5d4eb65dfd6a.png)
+![Screenshot]()
 
 # Installing into Slack
 
