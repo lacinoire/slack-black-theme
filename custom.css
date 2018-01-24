@@ -1067,16 +1067,17 @@ ts-jumper ts-jumper-container {
 /* post Slack 3.0.5 Stuff */
 
 .c-message__body .c-message--light .c-message__content_header {
-  color: var(--text);
+  color: var(--text) !important;
 }
 
-.c-virtual_list__item:hover {
-  background-color: var(--background-hover)
+.c-message--hover {
+  background-color: var(--background-hover) !important;
 }
 
 .c-mrkdwn__broadcast--mention {
-  color: var(--secondary);
+  color: var(--primary);
   background-color: var(--background-elevated);
+  border: 1px solid var(--secondary);
 }
 
 .c-reaction {
@@ -1085,20 +1086,33 @@ ts-jumper ts-jumper-container {
 }
 
 .c-reation_add {
-  opacity: 1;
-  background: inherit;
-  border: 1px solid var(--secondary);
+  opacity: 1 !important;
+  background: inherit !important;
+  border: 1px solid var(--secondary) !important;
 }
 
 .c-message_list__day_divider__label__pill {
-  background: var(--background);
+  background: var(--background) !important;
 }
 
 .c-message_actions__button {
-  color: var(--text);
+  color: var(--text) !important;
 }
 
 .c-message__bot_label {
-  color: var(--text);
-  background: var(--background-hover);
+  color: var(--text) !important;
+  background: var(--background-hover) !important;
+}
+
+.c-message_list__day_divider__line {
+  border-top: 1px solid var(--secondary) !important;
+}
+
+.inline_message_input_container .ql-container {
+  color: var(--text) !important;
+  border-color: var(--border-dim) !important;
+}
+
+.c-message__sender {
+  color: var(--primary);
 }
