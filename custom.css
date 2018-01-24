@@ -1066,10 +1066,15 @@ ts-jumper ts-jumper-container {
 
 /* post Slack 3.0.5 Stuff */
 
-.c-message__body .c-message--light .c-message__content_header {
+.c-message__body {
   color: var(--text) !important;
 }
-
+.c-message--light {
+  color: var(--text) !important;
+}
+.c-message__content_header {
+  color: var(--text) !important;
+}
 .c-message--hover {
   background-color: var(--background-hover) !important;
 }
@@ -1093,6 +1098,7 @@ ts-jumper ts-jumper-container {
 
 .c-message_list__day_divider__label__pill {
   background: var(--background) !important;
+  color: var(--primary);
 }
 
 .c-message_actions__button {
@@ -1114,5 +1120,42 @@ ts-jumper ts-jumper-container {
 }
 
 .c-message__sender {
-  color: var(--primary);
+  color: var(--primary) !important;
+}
+
+.c-message--light .c-message__sender .c-message__sender_link {
+  color: var(--primary) !important;
+}
+
+.c-message_actions__button {
+  background: var(--background) !important;
+  border: 1px solid var(--primary) !important;
+  border-right: 1px solid var(--primary) !important;
+}
+
+.c-icon {
+  color: var(--text) !important;
+}
+
+/* file container */
+.c-file_container {
+  background: var(--background-elevated) !important;
+  border: 1px solid var(--secondary) !important;
+}
+
+.c-file__title {
+  color: var(--primary) !important;
+}
+
+.c-file__meta {
+  color: var(--text) !important;
+}
+
+.c-mrkdwn__mention, .c-mrkdwn__mention:hover, .c-mrkdwn__member--mention, .c-mrkdwn__member--mention:hover, .c-mrkdwn__broadcast--mention, .c-mrkdwn__broadcast--mention:hover, .c-mrkdwn__subteam--mention, .c-mrkdwn__subteam--mention:hover {
+  background: var(--background-elevated) !important;
+  color: var(--primary) !important;
+}
+
+span.c-message_attachment__text {
+  color: mediumslateblue !important;
 }
